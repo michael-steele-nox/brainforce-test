@@ -34,28 +34,39 @@
 				</div>
 				<!-- /.navbar-contacts -->
 
-				<nav class="navbar-nav">
-					<ul class="navbar-menu navbar__text">
-						<li class="navbar-item">
-							<a href="#" class="navbar-link">Услуги</a>
-						</li>
-						<li class="navbar-item">
-							<a href="#" class="navbar-link">О компании</a>
-						</li>
-						<li class="navbar-item">
-							<a href="#" class="navbar-link">Документация</a>
-						</li>
-						<li class="navbar-item active">
-							<a href="#" class="navbar-link navbar-text__selected selected">Вопросы</a>
-						</li>
-						<li class="navbar-item">
-							<a href="#" class="navbar-link">Контакты</a>
-						</li>
-					</ul>
-				</nav>
+
+				<div class="navbar-panel">
+
+					<nav class="navbar-nav">
+
+						<button class="navbar-menu__close-button">
+							<img src="img/menu_close.svg" alt="close-button">
+						</button>
+
+						<ul class="navbar-menu navbar__text">
+							<li class="navbar-item">
+								<a href="#" class="navbar-link">Услуги</a>
+							</li>
+							<li class="navbar-item">
+								<a href="#" class="navbar-link">О компании</a>
+							</li>
+							<li class="navbar-item">
+								<a href="#" class="navbar-link">Документация</a>
+							</li>
+							<li class="navbar-item active">
+								<a href="#" class="navbar-link navbar-text__selected selected">Вопросы</a>
+							</li>
+							<li class="navbar-item">
+								<a href="#" class="navbar-link">Контакты</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<!-- /.navbar-panel -->
+
 
 				<button class="navbar-menu__button">
-					<img src="img/menu.svg" alt="">
+					<img src="img/menu.svg" alt="menu-button">
 				</button>
 
 				<div class="search-panel">
@@ -85,9 +96,9 @@
 				</div>
 				<!-- /.form-popup__title -->
 
-				<input class="form-input" name="userName" placeholder="Имя" autofocus required>
+				<input class="form-input" name="userName" placeholder="Имя" required>
 
-				<input class="form-input" id="phone" type="text" name="userPhone" placeholder="Телефон">
+				<input class="form-input" id="phone" type="text" name="userPhone" placeholder="Телефон" required>
 
 				<div class="submit-button">
 					<input type="submit" value="Заказать консультацию">
@@ -148,7 +159,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Сплочённость команды профессионалов ни к чему нас не обязывает
@@ -161,7 +172,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Неподкупность государственных СМИ бодрит
@@ -174,7 +185,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Эксперты утверждают, что частотность поисковых запросов даёт нам право принимать самостоятельные решения
@@ -211,7 +222,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Сплочённость команды профессионалов ни к чему нас не обязывает
@@ -224,7 +235,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Неподкупность государственных СМИ бодрит
@@ -237,7 +248,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Эксперты утверждают, что частотность поисковых запросов даёт нам право принимать самостоятельные решения
@@ -274,7 +285,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Сплочённость команды профессионалов ни к чему нас не обязывает
@@ -287,7 +298,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Неподкупность государственных СМИ бодрит
@@ -300,7 +311,7 @@
 						<!-- /.page-content__section-pop_up -->
 					</div>
 					<!-- /.page-content__section-string -->
-					
+
 					<div class="page-content__section-string">
 						<div class="page-content__section-text">
 							Эксперты утверждают, что частотность поисковых запросов даёт нам право принимать самостоятельные решения
@@ -318,9 +329,9 @@
 			</section>
 			<!-- page-content__section section_3-->
 
-			
-			
-			
+
+
+
 			<aside class="page-content__aside aside">
 				<p>ЧАТ</p>
 			</aside>
@@ -421,9 +432,10 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="js/main.js"></script>
 	<script src="js/jquery.maskedinput.min.js"></script>
-	<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+	<!--	<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>-->
+	<!--	<script src="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.js"></script>-->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
 
-	<script src="https://snipp.ru/cdn/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script>
 		$('.page-content__section-content').accordion({
 			heightStyle: 'content',
@@ -432,6 +444,5 @@
 			active: 0
 		});
 	</script>
-
 
 </body></html>
