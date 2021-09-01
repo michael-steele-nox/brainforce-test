@@ -31,7 +31,37 @@ $(document).ready(function () {
 	
 	$("#phone").mask("+375(99)999-99-99");
 	
-	
+	$("#loginFormPopUp").validate({
+		rules: {
+			userName: {
+				required: true,
+//				minlength: 2,
+//				maxlength: 16,
+			},
+			userPhone: {
+				required: true,
+//				digits: true,
+				minlength: 7,
+//				maxlength: 7,
+			},
+		},
+		messages: {
+			userName: {
+				required: "Обязательное поле",
+//				minlength: "Имя должен быть минимум 2 символа",
+//				maxlength: "Максимальное число символов - 16",
+			},
+			userPhone: {
+				required: "Обязательное поле",
+//				digits: "Введите цифры",
+				minlength: "Введите 7 символов",
+//				maxlength: "Введите не более 7 символов",
+			},
+			submitHandler: function (form) {
+				form.submit();
+			}
+		}
+	});
 
 	
 	
