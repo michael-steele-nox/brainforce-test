@@ -229,6 +229,10 @@
 	justify-content: space-between;
 }
 
+.item {
+/*	margin-top: 20px;*/
+}
+
 .button-close {
 	position: absolute;
 	top: 6px;
@@ -253,9 +257,9 @@
 
 label#userName-error,
 label#phone-error {
-	
 	text-align: right;
 	color: red;
+	align-items: flex-start;
 	margin-right: 70px;
 	font-weight: 500;
 	font-size: 13px;
