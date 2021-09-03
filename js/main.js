@@ -1,16 +1,20 @@
 $(document).ready(function () {
 	//	console.log("Сайт готов к манипуляции");
 
-
-
 	var form = $(".form-popup");
 	var formCloseButton = $(".button-close");
 	var formPopupButton = $(".search-button");
+	var formSubmitButton = $(".submit-button");
+	var formAccesClose = $(".access-form__button-close");
+	var formAccessModal = $(".access-form-popup");
+	
 
 	var navbarPanel = $(".navbar-panel");
 	var navbarMenuButton = $(".navbar-menu__button");
 	var navbarCloseButton = $(".navbar-menu__close-button");
-
+	
+	formSubmitButton.on('click', toggleModal);
+	formAccesClose.on('click', toggleModal);
 
 	formCloseButton.on('click', toggleForm);
 	formPopupButton.on('click', toggleForm);
@@ -27,13 +31,19 @@ $(document).ready(function () {
 		form.toggleClass("is-open");
 	};
 	
+	function toggleModal() {
+		formAccessModal.toggleClass("access-open");
+	};
+	
 	// implement phone mask
 
 	$("#phone").mask("+375(99)999-99-99");
 	
 	// implement validation form
-
-	$("#loginFormPopUp").validate({
+	
+	var validateForm = $(document).find('#loginFormPopUp')
+	
+	validateForm.validate({
 		rules: {
 			userName: {
 				required: true,
@@ -62,11 +72,10 @@ $(document).ready(function () {
 			submitHandler: function (form) {
 				form.submit();
 			}
-
-
 		}
 	});
-
+	
+	validateForm.submit();
 
 
 
