@@ -207,8 +207,12 @@
 	-ms-align-items: center;
 	align-items: center;
 	z-index: 100;
-	display: none;
+/*	display: none;*/
+	opacity: 0;
+	transform: scale(0);
+	transition: transform 0.2s, opacity .2s;
 }
+
 
 .form-popup__content {
 	position: relative;
@@ -227,10 +231,31 @@
 	-o-flex-direction: column;
 	flex-direction: column;
 	justify-content: space-between;
+/*	transform: scale(0);*/
+/*	opacity: 0;*/
+/*	transform: translateY(-20%);*/
+/*	transition-delay: .2s;*/
 }
 
-.item {
-/*	margin-top: 20px;*/
+#loginFormPopUp {
+	transform: scale(0);
+/*	opacity: 0;*/
+/*	transform: translateY(-100%);*/
+	transition-delay: 0.2s;
+	
+}
+
+.is-open {
+	display: flex;
+	opacity: 1;
+	transform: scale(1);
+}
+
+.is-open > #loginFormPopUp {
+/*	opacity: 1;*/
+/*	transform: translateY(0);*/
+	transform: scale(1);
+	transition: transform 0.5s
 }
 
 .button-close {
@@ -295,20 +320,16 @@ label#phone-error {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-/*	display: flex;*/
+	display: flex;
 	background-color: rgba(0, 0, 0, 0.5);
 	justify-content: center;
 	-ms-align-items: center;
 	align-items: center;
 	z-index: 200;
-	display: none;
-/*	opacity: 0;*/
+/*	display: none;*/
+	opacity: 0;
 	transform: scale(0);
-	transition: 1s;
-}
-
-.is-open {
-	display: flex;
+/*	transition: 0.2s;*/
 }
 
 .access-open {
@@ -343,6 +364,15 @@ label#phone-error {
 	flex-direction: column;
 	justify-content: center;
 	flex-grow: 1;
+	opacity: 0;
+	transform: translateY(-20%);
+	transition: transform 0.5s, opacity .5s;
+	transition-delay: .2s;
+}
+
+.access-open > .access-form__content {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .access-form__title,
@@ -801,6 +831,9 @@ label#phone-error {
 
 	.navbar-nav {
 		position: relative;
+		transform: translateX(-100%);
+		transition: transform 0.5s ease-out;
+/*		transition-delay: 0.5s;*/
 	}
 
 	.navbar-panel {
@@ -811,10 +844,13 @@ label#phone-error {
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.8);
 		z-index: 10;
-		display: none;
+		display: flex;
 		justify-content: center;
 		-ms-align-items: center;
 		align-items: center;
+		opacity: 0;
+		transform: scale(0);
+		transition: transform 0.2s, opacity 0.2s;
 	}
 
 	.navbar-menu__close-button {
@@ -824,10 +860,6 @@ label#phone-error {
 		right: -17px;
 		cursor: pointer;
 		z-index: 20;
-	}
-
-	.navbar-open {
-		display: flex;
 	}
 
 	.navbar-menu {
@@ -840,6 +872,20 @@ label#phone-error {
 		padding: 20px;
 		background-color: #fff;
 		border-radius: 10px;
+		
+	}
+	
+	.navbar-open {
+		display: flex;
+		opacity: 1;
+		transform: scale(1);
+	}
+	
+	.navbar-open > .navbar-nav{
+		display: flex;
+/*		opacity: 1;*/
+/*		transform: scale(1);*/
+		transform: translateX(0);
 	}
 
 	.navbar-item:not(:last-child) {
