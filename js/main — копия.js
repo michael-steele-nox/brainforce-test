@@ -1,44 +1,39 @@
 $(document).ready(function () {
 	//	console.log("Сайт готов к манипуляции");
 
-	let form = $(".form-popup");
-	let formCloseButton = $(".button-close");
-	let formPopupButton = $(".search-button");
-	let formSubmitButton = $(".submit-button");
-	let formAccesClose = $(".access-form__button-close");
-	let formAccessModal = $(".access-form-popup");
+	var form = $(".form-popup");
+	var formCloseButton = $(".button-close");
+	var formPopupButton = $(".search-button");
+	var formSubmitButton = $(".submit-button");
+	var formAccesClose = $(".access-form__button-close");
+	var formAccessModal = $(".access-form-popup");
 
 
-	let navbarPanel = $(".navbar-panel");
-	let navbarMenuButton = $(".navbar-menu__button");
-	let navbarCloseButton = $(".navbar-menu__close-button");
+	var navbarPanel = $(".navbar-panel");
+	var navbarMenuButton = $(".navbar-menu__button");
+	var navbarCloseButton = $(".navbar-menu__close-button");
 
-//	formSubmitButton.on('click', openModal);
-	formAccesClose.on('click', closeModal);
+//	formSubmitButton.on('click', toggleModal);
+	formAccesClose.on('click', toggleModal);
 
-	formCloseButton.on('click', closeForm);
-	formPopupButton.on('click', openForm);
+//	formCloseButton.on('click', toggleForm);
+	formPopupButton.on('click', toggleForm);
 	
 	navbarMenuButton.on('click', toggleNavbar);
+	//	navbarPanel.on('click', toggleNavbar);
 	navbarCloseButton.on('click', toggleNavbar);
+
 
 	function toggleNavbar() {
 		navbarPanel.toggleClass("navbar-open");
 	};
 
-	function openForm() {
-		form.addClass("is-open");
-	};
-	function closeForm() {
-		form.removeClass("is-open");
+	function toggleForm() {
+		form.toggleClass("is-open");
 	};
 
-	function openModal() {
-		formAccessModal.addClass("access-open");
-	};
-	
-	function closeModal() {
-		formAccessModal.removeClass("access-open");
+	function toggleModal() {
+		formAccessModal.toggleClass("access-open");
 	};
 
 	// implement phone mask
@@ -77,11 +72,27 @@ $(document).ready(function () {
 			},
 		},
 
+//					submitHandler: function (form) {
+//						form.submit();
+//					}
+
 		submitHandler: function () {
-			closeForm();
-			openModal();
+//		formSubmitButton.on('click', toggleModal);
+//		formAccesClose.on('click', toggleModal);
+//		formCloseButton.on('click', toggleForm);
+
+			// alert("hello");
+			
+			toggleModal();
+			toggleForm();
+			
 		}
-		
+
 	});
-	
+//		formAccesClose.on('click', toggleModal);
+//		 validateForm.submit();
+		// formSubmitButton.on('click', toggleModal);
+
+
+
 });
