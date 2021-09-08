@@ -1,5 +1,4 @@
 $(document).ready(function () {
-	//	console.log("Сайт готов к манипуляции");
 
 	let form = $(".form-popup");
 	let formCloseButton = $(".button-close");

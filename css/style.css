@@ -178,6 +178,12 @@
 	box-sizing: border-box;
 	border-radius: 8px;
 	cursor: pointer;
+	transition: 0.3s;
+}
+
+.search-button:hover {
+	background-color: var(--colorActive);
+	border: 1px solid var(--colorActive);
 }
 
 .search-button-text {
@@ -231,16 +237,10 @@
 	-o-flex-direction: column;
 	flex-direction: column;
 	justify-content: space-between;
-/*	transform: scale(0);*/
-/*	opacity: 0;*/
-/*	transform: translateY(-20%);*/
-/*	transition-delay: .2s;*/
 }
 
 #loginFormPopUp {
 	transform: scale(0);
-/*	opacity: 0;*/
-/*	transform: translateY(-100%);*/
 	transition-delay: 0.2s;
 	
 }
@@ -252,8 +252,6 @@
 }
 
 .is-open > #loginFormPopUp {
-/*	opacity: 1;*/
-/*	transform: translateY(0);*/
 	transform: scale(1);
 	transition: transform 0.5s
 }
@@ -301,10 +299,17 @@ label#phone-error {
 	color: var(--colorGray1);
 	max-width: 223px;
 	padding: 12px 20px;
-	background: #FFDB2D;
+	background-color: var(--colorActive);
 	border-radius: 8px;
-	border: none;
+	border: 1px solid transparent;
 	cursor: pointer;
+	transition: 0.5s;
+}
+
+.submit-button input:hover {
+	background-color: var(--colorGray3);
+	border-radius: 8px;
+	border: 1px solid var(--colorGray1);
 }
 
 .form-popup__title {
@@ -326,10 +331,8 @@ label#phone-error {
 	-ms-align-items: center;
 	align-items: center;
 	z-index: 200;
-/*	display: none;*/
 	opacity: 0;
 	transform: scale(0);
-/*	transition: 0.2s;*/
 }
 
 .access-open {
@@ -397,16 +400,11 @@ label#phone-error {
 	margin-top: 67px;
 	background-image: url(../img/image.png);
 	background-repeat: no-repeat;
-	/*	background-attachment: fixed;*/
-	/*	background-position: center center;*/
-	/*	background-size: cover;*/
 
 	background-position: right top 888px;
 }
 
 .page-content__faq {
-	/*	width: 447px;*/
-	/*	height: 102px;*/
 	margin-top: 10px;
 	margin-bottom: 40px;
 }
@@ -414,7 +412,6 @@ label#phone-error {
 
 .page-content__aside {
 	max-width: 100%;
-	/*	height: 764px;*/
 	background: #E0E0E0;
 	border-radius: 8px;
 }
@@ -505,8 +502,6 @@ label#phone-error {
 	width: 680px;
 	display: flex;
 	justify-content: space-between;
-	-ms-align-items: center;
-	/*	align-items: center;*/
 	-webkit-flex-direction: column;
 	-moz-flex-direction: column;
 	-ms-flex-direction: column;
@@ -515,20 +510,16 @@ label#phone-error {
 	background-color: var(--colorGray3);
 	border-radius: 8px;
 	cursor: pointer;
-	/*	margin-bottom: 5px;*/
-	/*	position: relative;*/
 }
 
 .ui-accordion-icons {
 	content: '';
-	/*	display: inline-block;*/
 	background: url(../img/plus.svg) right center no-repeat;
 	margin-right: 40px;
 }
 
 .ui-accordion-header-active {
 	content: '';
-	/*	display: inline-block;*/
 	background: url(../img/plus_45_deg.svg) right center no-repeat;
 	margin-right: 40px;
 }
@@ -569,7 +560,6 @@ label#phone-error {
 }
 
 .footer-content {
-	/*	height: 803px;*/
 	background: var(--colorGray1);
 	display: flex;
 	padding-top: 80px;
@@ -614,9 +604,6 @@ label#phone-error {
 .footer-navbar__common {
 	display: flex;
 	justify-content: space-between;
-
-
-	/*	margin-bottom: 80px;*/
 }
 
 .footer-navbar__item a {
@@ -831,9 +818,8 @@ label#phone-error {
 
 	.navbar-nav {
 		position: relative;
-		transform: translateX(-100%);
+		transform: translateY(-100%);
 		transition: transform 0.5s ease-out;
-/*		transition-delay: 0.5s;*/
 	}
 
 	.navbar-panel {
@@ -883,9 +869,7 @@ label#phone-error {
 	
 	.navbar-open > .navbar-nav{
 		display: flex;
-/*		opacity: 1;*/
-/*		transform: scale(1);*/
-		transform: translateX(0);
+		transform: translateY(0);
 	}
 
 	.navbar-item:not(:last-child) {
@@ -931,7 +915,6 @@ label#phone-error {
 
 	.grid-container {
 		grid-template-columns: 1fr;
-		/*		justify-items: center;*/
 		grid-column-gap: 20px;
 		grid-template-areas:
 			"faq"
@@ -1000,15 +983,12 @@ label#phone-error {
 	}
 
 	.navbar {
-		/*		flex-wrap: wrap;*/
 		padding-top: 30px;
 		padding-bottom: 30px;
 		height: 100%;
-		/*		justify-content: space-around;*/
 	}
 
 	.search-panel {
-		/*		flex-grow: 1;*/
 		display: flex;
 		justify-content: space-between;
 	}
@@ -1022,7 +1002,6 @@ label#phone-error {
 	.footer-rights__text {
 		font-size: 70%;
 		padding-top: 5px;
-		/*		padding-bottom: 5px;*/
 	}
 
 	.footer-rights__content {
@@ -1046,7 +1025,6 @@ label#phone-error {
 		order: 1;
 		margin-left: 0;
 		flex-grow: 0;
-		/*		justify-content: space-around;*/
 	}
 
 	.search-input {
